@@ -1,0 +1,16 @@
+// Para la gestion de errores
+#include <errno.h>
+#include <stdio.h>
+// Para strerror
+#include <string.h>
+
+int main( int argc, char **argv )
+{
+	int i;
+	for(i = 0; i < sys_nerr - 1; i++)
+	{
+		printf("Error %i: %s\n", i, sys_errlist[i]);
+	} 
+
+	return 0;
+}

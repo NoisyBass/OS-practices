@@ -1,0 +1,17 @@
+// Para time
+#include <time.h>
+// Para printf
+#include <stdio.h>
+
+int main( int argc, char **argv )
+{
+	// time_t time(time_t *t)
+	time_t fecha = time(NULL);
+
+	printf("-> Fecha: %d\n", hora);
+
+	// char *ctime(const time_t *time)
+	printf("-> Fecha en un formato legible: %s\n", ctime(&fecha));
+
+	return 0;
+}
