@@ -26,7 +26,7 @@ int main( int argc, char **argv )
 	printf("=> Número major: %i\n", major(buf.st_dev));
 	printf("=> Número minor: %i\n", minor(buf.st_dev));
 	printf("=> Inodo: %d\n", buf.st_ino);
-	printf("=> Hora del último acceso: %s\n", ctime(&buf.st_atime));
+	printf("=> Hora del último acceso: %s", ctime(&buf.st_atime));
 	
 	if(S_ISREG(buf.st_mode))
 	{
