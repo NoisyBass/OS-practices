@@ -1,8 +1,6 @@
-// Apertura de ficheros
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-// Gestion de errores
 #include <errno.h>
 #include <stdio.h>
 
@@ -10,7 +8,7 @@ int main( int argc, char **argv )
 {
 	const char *file_name = "prueba645";
 	
-	// Queremos poner 0750, asi que ponemos lo contrario
+	// Queremos poner 0645, asi que ponemos lo contrario
 	mode_t old_mask = umask(0132);
 
 	if(open(file_name, O_CREAT, 0777) == -1)

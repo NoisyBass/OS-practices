@@ -1,0 +1,19 @@
+#include <time.h>
+
+// Tiempo en segundos desde el 1 de enero de 1970
+time_t time(time_t *t);
+
+
+#include <unistd.h>
+#include <sys/time.h>
+
+// Funciones para fijar y obtener la fecha del sistema:
+int gettimeofday(struct timeval *tv, struct timezone *tz);
+int settimeofday(const struct timeval *tv, const struct timezone *tz);
+
+struct timeval {
+	long tv_sec; /* segundos */
+	long tv_usec; /* microsegundos */
+}
+
+// El campo timezone es un campo obsoleto que nunca debe ser utilizado

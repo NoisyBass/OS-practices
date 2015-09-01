@@ -5,7 +5,6 @@
 #include <stdio.h>
 // Gestion de errores
 #include <errno.h>
-#include <stdio.h>
 // Apertura de ficheros
 #include <sys/types.h>
 

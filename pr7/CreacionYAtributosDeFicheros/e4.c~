@@ -13,7 +13,7 @@ int main( int argc, char **argv )
 	// Queremos poner 0750, asi que ponemos lo contrario
 	umask(0027);
 
-	if(open(file_name, O_CREAT) == -1)
+	if(open(file_name, O_CREAT, 0777) == -1)
 	{
 		perror("¡! Error open");
 		return -1;

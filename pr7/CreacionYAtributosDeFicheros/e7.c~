@@ -5,6 +5,9 @@
 #include <stdio.h>
 // Fecha
 #include <time.h>
+// Gestion de errores
+#include <errno.h>
+#include <stdio.h>
 
 int main( int argc, char **argv )
 {
@@ -19,7 +22,7 @@ int main( int argc, char **argv )
 
 	if(stat(file_name, &buf) == -1)
 	{
-		perror("¡! Error open");
+		perror("¡! Error stat");
 		return -1;
 	}
 

@@ -1,11 +1,7 @@
-// Atributos de ficheros
 #include <sys/types.h>
 #include <sys/stat.h>
-// printf
 #include <stdio.h>
-// Fecha
 #include <time.h>
-// Gestion de errores
 #include <errno.h>
 #include <stdio.h>
 
@@ -22,7 +18,7 @@ int main( int argc, char **argv )
 
 	if(stat(file_name, &buf) == -1)
 	{
-		perror("¡! Error stat");
+		perror("¡! Error en la función stat");
 		return -1;
 	}
 
